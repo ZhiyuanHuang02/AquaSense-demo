@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f1e8"/>
+  <path d="M0 500C240 390 375 655 630 515S960 320 1200 430v200H0Z" fill="#d7f3ec"/>
+  <circle cx="980" cy="170" r="230" fill="#d7f3ec"/>
+  <circle cx="980" cy="170" r="160" fill="none" stroke="#39c5b7" stroke-width="2" stroke-dasharray="8 14"/>
+  <path d="M980 42c-52 82-116 145-116 219a116 116 0 0 0 232 0c0-74-64-137-116-219Z" fill="#39c5b7"/>
+  <path d="M922 264c6 35 28 58 64 69" fill="none" stroke="white" stroke-width="18" stroke-linecap="round" opacity=".7"/>
+  <circle cx="1070" cy="470" r="56" fill="#d8ec78"/>
+  <circle cx="835" cy="55" r="25" fill="#f47b61"/>
+  <text x="80" y="120" fill="#0a7e78" font-family="monospace" font-size="22" letter-spacing="4">CONCEPTUAL BIOSENSOR</text>
+  <text x="80" y="255" fill="#062f35" font-family="Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-6">AquaSense</text>
+  <text x="80" y="330" fill="#36585c" font-family="Arial, sans-serif" font-size="37">See what water carries.</text>
+  <line x1="80" y1="430" x2="500" y2="430" stroke="#bed0c9"/>
+  <text x="80" y="475" fill="#062f35" font-family="monospace" font-size="19" letter-spacing="2">PROJECT · ENGINEERING · RESULTS · IMPACT</text>
+</svg>
