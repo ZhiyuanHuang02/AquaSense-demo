@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Page not found" description="The requested AquaSense page could not be found.">
+  <section class="not-found">
+    <span>404</span>
+    <p class="eyebrow">Sample not found</p>
+    <h1>This result came back blank.</h1>
+    <p>The page may have moved, or the address may be incomplete.</p>
+    <a class="button primary" href={base}>Return to overview</a>
+  </section>
+</BaseLayout>
+<style>
+  .not-found { width: min(calc(100% - 2rem), var(--max)); min-height: 70vh; margin: auto; display: grid; align-content: center; justify-items: start; position: relative; }
+  .not-found > span { position: absolute; right: 0; z-index: -1; color: transparent; -webkit-text-stroke: 1px var(--line); font-size: clamp(10rem, 28vw, 25rem); font-weight: 800; opacity: .8; }
+  .not-found h1 { max-width: 800px; margin: .5rem 0 1rem; font-size: clamp(3rem, 8vw, 7rem); }
+  .not-found > p:not(.eyebrow) { color: var(--ink-soft); font-size: 1.15rem; }
+</style>

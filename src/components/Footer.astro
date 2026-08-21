@@ -1,0 +1,31 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a class="brand footer-brand" href={base}>
+        <svg class="brand-mark" viewBox="0 0 42 48" aria-hidden="true"><path d="M21 2C15 12 5 22 5 32a16 16 0 0 0 32 0C37 22 27 12 21 2Z" fill="currentColor"/></svg>
+        <span><strong>AquaSense</strong><small>water, made legible</small></span>
+      </a>
+      <p class="footer-note">An independent portfolio concept exploring how synthetic biology could make water screening clearer and more accessible.</p>
+    </div>
+    <div>
+      <p class="footer-label">Explore</p>
+      <a href={`${base}project/`}>Project design</a>
+      <a href={`${base}engineering/`}>Engineering cycles</a>
+      <a href={`${base}results/`}>Illustrative results</a>
+    </div>
+    <div>
+      <p class="footer-label">Context</p>
+      <a href={`${base}human-practices/`}>Human practices</a>
+      <a href="https://github.com/ZhiyuanHuang02/AquaSense-demo">Source code</a>
+      <a href={`${base}accessibility/`}>Accessibility</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Designed and developed by Zhiyuan Huang.</span>
+    <span>Concept only · No diagnostic or regulatory claims.</span>
+  </div>
+</footer>

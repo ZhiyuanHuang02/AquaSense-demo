@@ -1,0 +1,80 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const {
+  title,
+  description,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialCard = new URL(`${import.meta.env.BASE_URL}social-card.png`, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#062f35" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} · AquaSense`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialCard} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title} · AquaSense</title>
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem('aquasense-theme');
+        const preferred = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || preferred;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const progress = document.querySelector<HTMLElement>('.reading-progress span');
+      const updateProgress = () => {
+        if (!progress) return;
+        const distance = document.documentElement.scrollHeight - innerHeight;
+        progress.style.transform = `scaleX(${distance > 0 ? scrollY / distance : 0})`;
+      };
+      addEventListener('scroll', updateProgress, { passive: true });
+      addEventListener('resize', updateProgress);
+      updateProgress();
+
+      const revealItems = document.querySelectorAll<HTMLElement>('[data-reveal]');
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealItems.forEach((item) => item.dataset.visible = 'true');
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              (entry.target as HTMLElement).dataset.visible = 'true';
+              observer.unobserve(entry.target);
+            }
+          }),
+          { threshold: 0.12 },
+        );
+        revealItems.forEach((item) => observer.observe(item));
+      }
+    </script>
+  </body>
+</html>
