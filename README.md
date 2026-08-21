@@ -3,7 +3,6 @@
 **A content-rich scientific project site for a conceptual, cell-free water biosensor.**
 
 [![Quality checks](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/ci.yml)
-[![Deploy to GitHub Pages](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/deploy.yml/badge.svg)](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/deploy.yml)
 
 ![AquaSense — see what water carries](public/social-card.png)
 
@@ -20,7 +19,7 @@ AquaSense explores how synthetic biology could support preliminary heavy-metal w
 - Interactive result explorer with an equivalent HTML data table
 - Light and dark themes with saved preference and reduced-motion support
 - Clear evidence labels separating documented design work, illustrative data, and proposed validation
-- Automated production deployment through GitHub Actions and GitHub Pages
+- Production build published through a dedicated GitHub Pages branch
 
 ## Tech stack
 
@@ -39,7 +38,7 @@ AquaSense explores how synthetic biology could support preliminary heavy-metal w
 │   ├── layouts/            # shared document shell and metadata
 │   ├── pages/              # content chapters and 404 page
 │   └── styles/             # design tokens and global responsive system
-└── .github/workflows/      # GitHub Pages deployment
+└── .github/workflows/      # Pull-request quality checks
 ```
 
 ## Run locally
