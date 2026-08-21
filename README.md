@@ -2,6 +2,11 @@
 
 **A content-rich scientific project site for a conceptual, cell-free water biosensor.**
 
+[![Quality checks](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/ci.yml)
+[![Deploy to GitHub Pages](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/deploy.yml/badge.svg)](https://github.com/ZhiyuanHuang02/AquaSense-demo/actions/workflows/deploy.yml)
+
+![AquaSense — see what water carries](public/social-card.png)
+
 [Live demo](https://zhiyuanhuang02.github.io/AquaSense-demo/) · [Project design](https://zhiyuanhuang02.github.io/AquaSense-demo/project/) · [Engineering](https://zhiyuanhuang02.github.io/AquaSense-demo/engineering/) · [Results](https://zhiyuanhuang02.github.io/AquaSense-demo/results/)
 
 AquaSense explores how synthetic biology could support preliminary heavy-metal water screening through a sealed, cell-free, colorimetric cartridge. The site is designed to make a complex technical project understandable to readers with different levels of subject knowledge.
